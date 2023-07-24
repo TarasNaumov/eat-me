@@ -582,36 +582,39 @@ footer ul {
     content: "";
     position: absolute;
     display: block;
-    top: -50%;
+    top: 50%;
     left: 0px;
     width: 12px;
     height: 17px;
     background-image: url("../img/sprite.png");
     background-position: -492px 0;
+    transform: translateY(-50%);
 }
 
 .footer-contacts ul li:nth-child(2) a::before {
     content: "";
     position: absolute;
     display: block;
-    top: -50%;
+    top: 50%;
     left: 0px;
     width: 13px;
     height: 14px;
     background-image: url("../img/sprite.png");
     background-position: -504px 0;
+    transform: translateY(-50%);
 }
 
 .footer-contacts ul li:nth-child(3) a::before {
     content: "";
     position: absolute;
     display: block;
-    top: -50%;
+    top: 50%;
     left: 0px;
     width: 16px;
     height: 11px;
     background-image: url("../img/sprite.png");
     background-position: -517px 0;
+    transform: translateY(-50%);
 }
 
 .news input {
