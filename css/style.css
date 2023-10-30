@@ -128,28 +128,67 @@ nav ul a {
     letter-spacing: 1rem;
     text-transform: uppercase;
     text-decoration: none;
+    position: relative;
     color: #151517;
     font-weight: 700;
     font-family: "Roboto";
 }
 
-nav ul a:hover {
-    border-bottom: 3px solid #f5ed08;
+nav ul a::before {
+    content: '';
+    transition: 0.3s;
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #f5ed08;
 }
 
-.slaider {
+nav ul a:hover::before {
+   width: 100%;
+}
+
+.slider {
     display: flex;
     justify-content: center;
     padding: 55px 0;
-    background: url(../img/slaider1.jpg) 100% /cover;
+    background:linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(../img/slider.jpg) 100% /cover;
+    position: relative;
 }
 
-.slaider div {
+.slider div:nth-child(2) {
     text-align: center;
     width: 70%;
 }
 
-.slaider p:first-child {
+.slider .arow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 60%;
+    padding: 0;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.slider .arow:hover {
+    opacity: 100%;
+}
+
+.arow-left {
+    left: 5%;
+}
+
+.arow-right {
+    right: 5%;
+}
+
+.slider p:first-child {
     font-size: 50rem;
     margin-bottom: 43px;
     letter-spacing: 2rem;
@@ -161,7 +200,7 @@ nav ul a:hover {
     text-align: center;
 }
 
-.slaider .information-slider {
+.slider .information-slider {
     font-size: 18rem;
     line-height: 28rem;
     color: #ffffff;
@@ -170,7 +209,7 @@ nav ul a:hover {
     margin-bottom: 45px;
 }
 
-.slaider a,
+.slider a,
 .action a {
     display: inline-block;
     padding: 13.5px 37px;
@@ -305,7 +344,7 @@ section>.wrapper {
 }
 
 .action {
-    background-image: url(../img/action.jpg);
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0, 0.5)), url(../img/action.jpg) 100% /cover;
     padding: 66px 0;
 }
 
